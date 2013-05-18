@@ -81,6 +81,10 @@ class MMPI2
 		"Depresion level: #{@depression_level}"
 	end
 
+	def answers_array
+		@sentences.collect {|a_sentence|a_sentence.answer}
+	end
+
 	# -------------------------------------------------------------------------
 	# Private Methods...
 	# -------------------------------------------------------------------------

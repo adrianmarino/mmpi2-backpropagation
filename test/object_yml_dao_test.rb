@@ -1,7 +1,7 @@
 require "test/unit"
 require "./helper"
 
-class MMPI2DaoTest < Test::Unit::TestCase
+class ObjectYMLDaoTest < Test::Unit::TestCase
 	# -------------------------------------------------------------------------
 	# Test Methods...
 	# -------------------------------------------------------------------------
@@ -30,6 +30,6 @@ class MMPI2DaoTest < Test::Unit::TestCase
 	end
 
 	def setup
-		@target = MMPI2Dao.new MMPI2_DAO_FILE_NAME
+		@target = ObjectYMLDao.new MMPI2_DAO_FILE_NAME
 	end
 end

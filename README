@@ -1,0 +1,8 @@
+Generar datos de entrenamiento
+-------------------------------------------------------------------------------
+
+$ ruby generate_training_data.rb 100
+
+Este comando genera 100 tests mmpi2 con respuestas aleatorias y guarda los
+resultados en el archivo mmpi2_trainning_tests.yml.
+

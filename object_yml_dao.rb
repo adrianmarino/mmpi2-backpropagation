@@ -1,23 +1,23 @@
-class MMPI2Dao
+class ObjectYMLDao
 	# -------------------------------------------------------------------------
 	# Public Methods...
 	# -------------------------------------------------------------------------
-	def save(tests)
+	def save(objects)
 		File.open(@path, WRITE_ONLY) do|a_file|
-		 YAML.dump(tests, a_file)
+		 YAML.dump(objects, a_file)
 		end
-		puts "Tests saved on #{@path} file..."
+		puts "Objects saved on #{@path} file..."
 	end
 
 	def load
-		tests = []
+		objects = []
 		if File.exists?(@path)
-	  	File.open(@path, READ_ONLY){|a_file|tests = YAML.load(a_file)}
+	  	File.open(@path, READ_ONLY){|a_file|objects = YAML.load(a_file)}
 	  else
-	  	tests = nil
+	  	objects = nil
 	  end
-	  puts "Tests loaded from #{@path} file..."
-	  tests
+	  puts "Objects loaded from #{@path} file..."
+	  objects
 	end
 
 	# -------------------------------------------------------------------------

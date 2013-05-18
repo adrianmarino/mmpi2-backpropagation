@@ -9,7 +9,9 @@ class MMPI2Generator
 	def generate(a_number_of_tests = 1)
 		tests = []
 		a_number_of_tests.times do
-			 tests.push answer(new_test)
+			 test = answer(new_test)
+			 test.calculate_results
+			 tests.push test
 		end
 		tests
 	end

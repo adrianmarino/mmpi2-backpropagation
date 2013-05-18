@@ -1,103 +1,138 @@
 ---
 - !ruby/object:MMPI2
   sentences:
-  - !ruby/object:Sentence
+  - &7218340 !ruby/object:Sentence
     text: Tengo buen apetito.
     answer: 0
-  - !ruby/object:Sentence
+  - &7218260 !ruby/object:Sentence
     text: El ruido me despierta fácilmente.
     answer: 0
-  - !ruby/object:Sentence
+  - &7218140 !ruby/object:Sentence
     text: En mi vida diaria hay muchas cosas que me resultan interesantes.
     answer: 0
-  - !ruby/object:Sentence
+  - &7218040 !ruby/object:Sentence
     text: Actualmente, tengo tanta capacidad de trabajo como antes.
-    answer: 1
-  - !ruby/object:Sentence
+    answer: 0
+  - &7217900 !ruby/object:Sentence
     text: Trabajo bajo una tensión muy grande.
-    answer: 1
-  - !ruby/object:Sentence
+    answer: 0
+  - &7217720 !ruby/object:Sentence
     text: Sufro ataques de náuseas y vómitos.
     answer: 1
-  - !ruby/object:Sentence
+  - &7217540 !ruby/object:Sentence
     text: Muy rara vez sufro de constipación (sequedad de vientre)
     answer: 0
-  - !ruby/object:Sentence
+  - &7217360 !ruby/object:Sentence
     text: A veces siento deseos de maldecir.
-    answer: 1
-  - !ruby/object:Sentence
+    answer: 0
+  - &7217180 !ruby/object:Sentence
     text: Me cuesta bastante concentrarme en un tSarea de trabajo.
     answer: 1
-  - !ruby/object:Sentence
+  - &7217020 !ruby/object:Sentence
     text: Raras veces me preocupo por mi salud.
     answer: 1
-  - !ruby/object:Sentence
+  - &7216900 !ruby/object:Sentence
     text: A veces siento deseos de romper cosas.
     answer: 0
-  - !ruby/object:Sentence
+  - &7233260 !ruby/object:Sentence
     text: He tenido períodos de días, semanas o meses en los que no podía preocuparme
       por las cosas, porque no tenía ánimo para nada.
-    answer: 1
-  - !ruby/object:Sentence
+    answer: 0
+  - &7232020 !ruby/object:Sentence
     text: Mi sueño es irregular, inquieto.
     answer: 1
-  - !ruby/object:Sentence
+  - &7230600 !ruby/object:Sentence
     text: Mis razonamientos son ahora mejores que nunca.
-    answer: 0
-  - !ruby/object:Sentence
+    answer: 1
+  - &7230220 !ruby/object:Sentence
     text: Tengo tan buena salud física como la mayor parte de mis amigos.
-    answer: 0
-  - !ruby/object:Sentence
+    answer: 1
+  - &7230040 !ruby/object:Sentence
     text: Prefiero hacerme el desentendido con amigos del colegio, o personas conocidas
       que no veo desde hace tiempo, a menos que ellos me hablen primero.
-    answer: 0
-  - !ruby/object:Sentence
+    answer: 1
+  - &7228400 !ruby/object:Sentence
     text: Soy una persona sociable.
-    answer: 0
-  - !ruby/object:Sentence
+    answer: 1
+  - &7227940 !ruby/object:Sentence
     text: Algunas veces persisto en una cosa o tema hasta que los demás pierden la
       paciencia conmigo.
     answer: 0
-  - !ruby/object:Sentence
+  - &7227080 !ruby/object:Sentence
     text: Me gustaría ser tan feliz como parecen ser los otros.
-    answer: 0
-  - !ruby/object:Sentence
-    text: A veces hago rabiar (jugando) a los animales.
     answer: 1
-  - !ruby/object:Sentence
+  - &7226660 !ruby/object:Sentence
+    text: A veces hago rabiar (jugando) a los animales.
+    answer: 0
+  - &7226420 !ruby/object:Sentence
     text: Decididamente no tengo confianza en mí mismo.
     answer: 0
-  - !ruby/object:Sentence
+  - &7322080 !ruby/object:Sentence
     text: No parece importarme lo que me suceda.
-    answer: 0
-  - !ruby/object:Sentence
-    text: Nunca he vomitado sangre, ni sangrado al toser.
     answer: 1
-  - !ruby/object:Sentence
+  - &7321280 !ruby/object:Sentence
+    text: Nunca he vomitado sangre, ni sangrado al toser.
+    answer: 0
+  - &7320560 !ruby/object:Sentence
     text: Me hieren profundamente las críticas y los retos.
     answer: 0
-  - !ruby/object:Sentence
+  - &7320240 !ruby/object:Sentence
     text: A veces siento que verdaderamente soy un inútil.
     answer: 1
-  - !ruby/object:Sentence
+  - &7320060 !ruby/object:Sentence
     text: Lloro con facilidad.
-    answer: 1
-  - !ruby/object:Sentence
+    answer: 0
+  - &7319700 !ruby/object:Sentence
     text: Actualmente no comprendo lo que leo con la facilidad que tenía antes.
     answer: 1
-  - !ruby/object:Sentence
+  - &7319080 !ruby/object:Sentence
     text: Tengo miedo de volverme loco.
     answer: 1
-  - !ruby/object:Sentence
+  - &7317960 !ruby/object:Sentence
     text: Siento debilidad general la mayor parte del tiempo.
     answer: 1
-  - !ruby/object:Sentence
+  - &7317860 !ruby/object:Sentence
     text: No tengo accesos de alergia o asma.
     answer: 1
-  - !ruby/object:Sentence
+  - &7317780 !ruby/object:Sentence
     text: Me preocupo muchísimo.
     answer: 1
-  - !ruby/object:Sentence
+  - &7317640 !ruby/object:Sentence
     text: Me cuesta empezar a hacer cualquier cosa.
     answer: 1
-  depression_level: 22
+  depression_level: 17
+- !ruby/object:MMPI2
+  sentences:
+  - *7218340
+  - *7218260
+  - *7218140
+  - *7218040
+  - *7217900
+  - *7217720
+  - *7217540
+  - *7217360
+  - *7217180
+  - *7217020
+  - *7216900
+  - *7233260
+  - *7232020
+  - *7230600
+  - *7230220
+  - *7230040
+  - *7228400
+  - *7227940
+  - *7227080
+  - *7226660
+  - *7226420
+  - *7322080
+  - *7321280
+  - *7320560
+  - *7320240
+  - *7320060
+  - *7319700
+  - *7319080
+  - *7317960
+  - *7317860
+  - *7317780
+  - *7317640
+  depression_level: 21

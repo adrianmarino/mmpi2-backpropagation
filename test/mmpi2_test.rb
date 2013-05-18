@@ -13,6 +13,17 @@ class MMPI2Test < Test::Unit::TestCase
 		assert_equal 20, test.depression_level
 	end
 
+	def test_answers_array
+		# Prepare...
+		test = MMPI2.new sentences
+	
+		# Perform...
+		answers = test.answers_array
+	
+		# Assert...
+		assert_equal 32, answers.size
+	end
+
 	# -------------------------------------------------------------------------
 	# Private Methods...
 	# -------------------------------------------------------------------------
