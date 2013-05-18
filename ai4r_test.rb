@@ -4,10 +4,10 @@ require "./helper"
 #   2 inputs
 #   1 hidden layer with 3 neurons
 #   1 outputs
-net = Ai4r::NeuralNetwork::Backpropagation.new([2, 3, 1])  
+net = Ai4r::NeuralNetwork::Backpropagation.new([2, 3, 1])
 
 example = [[0,0],[0,1],[1,0],[1,1]]
-result = [[10],[20],[30],[40]]
+result = [[0],[1],[1],[0]]
 
 # Train the network
 400.times do |i|
@@ -16,7 +16,7 @@ result = [[10],[20],[30],[40]]
 end
 
 # Use it: Evaluate data with the trained network
-puts "evaluate 0,0: #{net.eval([0,0])}"  # =>  evaluate 0,0: 0.507531383375123
-puts "evaluate 0,1: #{net.eval([0,1])}"  # =>  evaluate 0,1: 0.491957823618629
-puts "evaluate 1,0: #{net.eval([1,0])}"  # =>  evaluate 1,0: 0.516413912471401
-puts "evaluate 1,1: #{net.eval([1,1])}"  # =>  evaluate 1,1: 0.500197884691668
+puts "\nEvaluate: 0 , 0 => #{net.eval([0,0])[0].round}"
+puts "Evaluate: 0 , 1 => #{net.eval([0,1])[0].round}" 
+puts "Evaluate: 1 , 0 => #{net.eval([1,0])[0].round}" 
+puts "Evaluate: 1 , 1 => #{net.eval([1,1])[0].round}" 
