@@ -1,138 +1,138 @@
 ---
 - !ruby/object:MMPI2
   sentences:
-  - &7156820 !ruby/object:Sentence
+  - &7578260 !ruby/object:Sentence
     text: Tengo buen apetito.
     answer: 1
-  - &7156680 !ruby/object:Sentence
+  - &7578000 !ruby/object:Sentence
     text: El ruido me despierta fácilmente.
     answer: 0
-  - &7156520 !ruby/object:Sentence
+  - &7577780 !ruby/object:Sentence
     text: En mi vida diaria hay muchas cosas que me resultan interesantes.
-    answer: 0
-  - &7156380 !ruby/object:Sentence
+    answer: 1
+  - &7577640 !ruby/object:Sentence
     text: Actualmente, tengo tanta capacidad de trabajo como antes.
-    answer: 0
-  - &7156080 !ruby/object:Sentence
+    answer: 1
+  - &7577520 !ruby/object:Sentence
     text: Trabajo bajo una tensión muy grande.
-    answer: 1
-  - &7155980 !ruby/object:Sentence
-    text: Sufro ataques de náuseas y vómitos.
-    answer: 1
-  - &7155760 !ruby/object:Sentence
-    text: Muy rara vez sufro de constipación (sequedad de vientre)
     answer: 0
-  - &7155640 !ruby/object:Sentence
+  - &7577320 !ruby/object:Sentence
+    text: Sufro ataques de náuseas y vómitos.
+    answer: 0
+  - &7577100 !ruby/object:Sentence
+    text: Muy rara vez sufro de constipación (sequedad de vientre)
+    answer: 1
+  - &7576960 !ruby/object:Sentence
     text: A veces siento deseos de maldecir.
     answer: 1
-  - &7155400 !ruby/object:Sentence
+  - &7576800 !ruby/object:Sentence
     text: Me cuesta bastante concentrarme en un tSarea de trabajo.
     answer: 0
-  - &7155220 !ruby/object:Sentence
+  - &7576580 !ruby/object:Sentence
     text: Raras veces me preocupo por mi salud.
     answer: 0
-  - &7155040 !ruby/object:Sentence
+  - &7576380 !ruby/object:Sentence
     text: A veces siento deseos de romper cosas.
-    answer: 0
-  - &7154820 !ruby/object:Sentence
+    answer: 1
+  - &7576220 !ruby/object:Sentence
     text: He tenido períodos de días, semanas o meses en los que no podía preocuparme
       por las cosas, porque no tenía ánimo para nada.
     answer: 0
-  - &7154640 !ruby/object:Sentence
+  - &7576060 !ruby/object:Sentence
     text: Mi sueño es irregular, inquieto.
     answer: 1
-  - &7154440 !ruby/object:Sentence
+  - &7575900 !ruby/object:Sentence
     text: Mis razonamientos son ahora mejores que nunca.
-    answer: 0
-  - &7154280 !ruby/object:Sentence
+    answer: 1
+  - &7575600 !ruby/object:Sentence
     text: Tengo tan buena salud física como la mayor parte de mis amigos.
     answer: 1
-  - &7154140 !ruby/object:Sentence
+  - &7575380 !ruby/object:Sentence
     text: Prefiero hacerme el desentendido con amigos del colegio, o personas conocidas
       que no veo desde hace tiempo, a menos que ellos me hablen primero.
-    answer: 1
-  - &7153860 !ruby/object:Sentence
+    answer: 0
+  - &7575100 !ruby/object:Sentence
     text: Soy una persona sociable.
     answer: 1
-  - &7153620 !ruby/object:Sentence
+  - &7574880 !ruby/object:Sentence
     text: Algunas veces persisto en una cosa o tema hasta que los demás pierden la
       paciencia conmigo.
-    answer: 1
-  - &7153440 !ruby/object:Sentence
-    text: Me gustaría ser tan feliz como parecen ser los otros.
     answer: 0
-  - &7153120 !ruby/object:Sentence
-    text: A veces hago rabiar (jugando) a los animales.
+  - &7574560 !ruby/object:Sentence
+    text: Me gustaría ser tan feliz como parecen ser los otros.
     answer: 1
-  - &7152760 !ruby/object:Sentence
+  - &7574400 !ruby/object:Sentence
+    text: A veces hago rabiar (jugando) a los animales.
+    answer: 0
+  - &7590240 !ruby/object:Sentence
     text: Decididamente no tengo confianza en mí mismo.
     answer: 1
-  - &7152520 !ruby/object:Sentence
+  - &7589800 !ruby/object:Sentence
     text: No parece importarme lo que me suceda.
-    answer: 0
-  - &7168320 !ruby/object:Sentence
+    answer: 1
+  - &7589620 !ruby/object:Sentence
     text: Nunca he vomitado sangre, ni sangrado al toser.
     answer: 0
-  - &7167980 !ruby/object:Sentence
+  - &7589460 !ruby/object:Sentence
     text: Me hieren profundamente las críticas y los retos.
-    answer: 1
-  - &7167800 !ruby/object:Sentence
+    answer: 0
+  - &7589140 !ruby/object:Sentence
     text: A veces siento que verdaderamente soy un inútil.
     answer: 0
-  - &7167620 !ruby/object:Sentence
+  - &7589000 !ruby/object:Sentence
     text: Lloro con facilidad.
     answer: 1
-  - &7167320 !ruby/object:Sentence
+  - &7588580 !ruby/object:Sentence
     text: Actualmente no comprendo lo que leo con la facilidad que tenía antes.
-    answer: 0
-  - &7166900 !ruby/object:Sentence
+    answer: 1
+  - &7588340 !ruby/object:Sentence
     text: Tengo miedo de volverme loco.
     answer: 1
-  - &7166680 !ruby/object:Sentence
+  - &7588220 !ruby/object:Sentence
     text: Siento debilidad general la mayor parte del tiempo.
     answer: 1
-  - &7166520 !ruby/object:Sentence
+  - &7588000 !ruby/object:Sentence
     text: No tengo accesos de alergia o asma.
     answer: 1
-  - &7166360 !ruby/object:Sentence
+  - &7587760 !ruby/object:Sentence
     text: Me preocupo muchísimo.
     answer: 1
-  - &7166140 !ruby/object:Sentence
+  - &7587540 !ruby/object:Sentence
     text: Me cuesta empezar a hacer cualquier cosa.
     answer: 1
-  depression_level: 16
+  depression_level: 11
 - !ruby/object:MMPI2
   sentences:
-  - *7156820
-  - *7156680
-  - *7156520
-  - *7156380
-  - *7156080
-  - *7155980
-  - *7155760
-  - *7155640
-  - *7155400
-  - *7155220
-  - *7155040
-  - *7154820
-  - *7154640
-  - *7154440
-  - *7154280
-  - *7154140
-  - *7153860
-  - *7153620
-  - *7153440
-  - *7153120
-  - *7152760
-  - *7152520
-  - *7168320
-  - *7167980
-  - *7167800
-  - *7167620
-  - *7167320
-  - *7166900
-  - *7166680
-  - *7166520
-  - *7166360
-  - *7166140
-  depression_level: 18
+  - *7578260
+  - *7578000
+  - *7577780
+  - *7577640
+  - *7577520
+  - *7577320
+  - *7577100
+  - *7576960
+  - *7576800
+  - *7576580
+  - *7576380
+  - *7576220
+  - *7576060
+  - *7575900
+  - *7575600
+  - *7575380
+  - *7575100
+  - *7574880
+  - *7574560
+  - *7574400
+  - *7590240
+  - *7589800
+  - *7589620
+  - *7589460
+  - *7589140
+  - *7589000
+  - *7588580
+  - *7588340
+  - *7588220
+  - *7588000
+  - *7587760
+  - *7587540
+  depression_level: 14
