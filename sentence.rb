@@ -7,12 +7,20 @@ class Sentence
 	attr_reader :text
 	attr_accessor :answer
 
-	def answer_yes
-		answer=1
+	def answer_yes?
+		@answer == 1
+	end
+
+	def answer_no?
+		@answer == 0
 	end
 
 	def answer_yes
-		answer=0
+		@answer = 1
+	end
+
+	def answer_no
+		@answer = 0
 	end
 
 	def to_s
@@ -24,9 +32,9 @@ class Sentence
 	end
 
 	def answer_to_s
-		if answer == 0 
+		if @answer == 0 
 			YES
-		elsif answer == 1
+		elsif @answer == 1
 			NO
 		end
 	end
