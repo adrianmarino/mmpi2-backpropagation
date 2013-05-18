@@ -9,6 +9,8 @@ require "./mmpi2_factory"
 require "./mmpi2_generator"
 require "./object_yml_dao"
 require "./mmpi2_back_propagation"
+require "./binary_converter"
+require "./mmpi2_back_propagation_result"
 
 # ----------------------------------------------------------------------------
 # Constants

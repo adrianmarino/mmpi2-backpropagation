@@ -7,7 +7,7 @@ require "./helper"
 net = Ai4r::NeuralNetwork::Backpropagation.new([2, 3, 1])  
 
 example = [[0,0],[0,1],[1,0],[1,1]]
-result = [[0],[1],[1],[0]]
+result = [[10],[20],[30],[40]]
 
 # Train the network
 400.times do |i|
