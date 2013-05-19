@@ -1,6 +1,6 @@
 syntax:glob
 *.yml
-mmpi2_net_trained
+net_trained
 
 syntax: regexp
 
