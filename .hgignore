@@ -1,6 +1,6 @@
 syntax:glob
 *.yml
-net_trained
+bin/net_trained.dat
 
 syntax: regexp
 
