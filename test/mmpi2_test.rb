@@ -16,12 +16,14 @@ class MMPI2Test < Test::Unit::TestCase
 	def test_answers_array
 		# Prepare...
 		test = MMPI2.new sentences
+		test.answer_yes_for_all_sentences
 	
 		# Perform...
 		answers = test.answers_array
 	
 		# Assert...
 		assert_equal 32, answers.size
+	  assert_equal 32, test.answers_array.inject(0) {| a_value, an_answer | a_value + an_answer}
 	end
 
 	# -------------------------------------------------------------------------
