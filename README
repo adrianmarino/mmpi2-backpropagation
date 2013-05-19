@@ -9,13 +9,32 @@ mmpi2_net_trained.
 Una vez que tenemos persistida la red, ya no hace falta entrenarla cada vez que 
 necesitamos usarla.
 
+
+
+
 Probar la red
 -------------------------------------------------------------------------------
 
-$ ruby mmpi2_test.rb
+$ ruby test_net.rb
 
-Este comando prueba la red ya entrenada en el paso anterior generando un caso
-aleatorio para el cual ya se conoce so resultado.
+Este comando prueba la red ya entrenada en el paso anterior, generando un caso
+aleatorio para el cual ya se conoce su resultado.
+
+
+
+
+Entrenar y probar la red en un solo paso
+-------------------------------------------------------------------------------
+
+Es posible entrenar y probar la red en un solo paso, aunque puede demorar
+algun tiempo dependiento del cuantos test se usen para entrenar la red.
+
+$ ruby train_and_test_net.rb 100
+
+Donde 100 es el número de test mmpi2 utilizados para entrenar la red.
+
+
+
 
 Configurar la red
 -------------------------------------------------------------------------------
