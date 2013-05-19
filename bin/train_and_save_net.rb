@@ -1,4 +1,4 @@
-require '../lib/helper'
+require './helper'
 
 # Parameneters...
 tests_count = ARGV[0].to_i
