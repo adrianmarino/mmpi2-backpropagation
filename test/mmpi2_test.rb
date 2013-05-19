@@ -1,7 +1,7 @@
 require "./helper"
 
 class MMPI2Test < Test::Unit::TestCase
-	def test_depression_level
+	def test_depression_level_all_answer_yes
 		# Prepare...
 		test = MMPI2.new sentences
 		test.answer_yes_for_all_sentences
@@ -11,6 +11,18 @@ class MMPI2Test < Test::Unit::TestCase
 
 		# Assert...
 		assert_equal 20, test.depression_level
+	end
+
+	def test_depression_level_all_answer_no
+		# Prepare...
+		test = MMPI2.new sentences
+		test.answer_no_for_all_sentences
+	
+		# Perform...
+		test.calculate_results
+
+		# Assert...
+		assert_equal 17, test.depression_level
 	end
 
 	def test_answers_array
