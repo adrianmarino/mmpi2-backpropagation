@@ -4,8 +4,12 @@ class MMPI2BackPropagation
 	# -------------------------------------------------------------------------
 	# Public Methods...
 	# -------------------------------------------------------------------------
-	def train(tests,times = 50)
-		times.times{tests.each {|a_test| @net.train a_test.answers_array, to_binary_array(a_test.depression_level) }}
+	def train(tests, a_max_error = NetConfiguration::MAX_ERROR)
+		tests.each {|a_test|
+			begin
+				error = @net.train a_test.answers_array, to_binary_array(a_test.depression_level) 
+			end while error > a_max_error 
+		}
   end
 
 	def results_of(a_test)
