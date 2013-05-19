@@ -23,7 +23,30 @@ class MMPI2Test < Test::Unit::TestCase
 	
 		# Assert...
 		assert_equal 32, answers.size
+	end
+
+	def test_answer_yes_for_all_sentences
+		# Prepare...
+		test = MMPI2.new sentences
+		
+		# Perform...
+		test.answer_yes_for_all_sentences
+
+		# Assert...
+		answers = test.answers_array
 	  assert_equal 32, test.answers_array.inject(0) {| a_value, an_answer | a_value + an_answer}
+	end
+
+	def test_answer_no_for_all_sentences
+		# Prepare...
+		test = MMPI2.new sentences
+		
+		# Perform...
+		test.answer_no_for_all_sentences
+
+		# Assert...
+		answers = test.answers_array
+	  assert_equal 0, test.answers_array.inject(0) {| a_value, an_answer | a_value + an_answer}
 	end
 
 	# -------------------------------------------------------------------------
