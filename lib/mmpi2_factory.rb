@@ -5,13 +5,6 @@ class MMPI2Factory
 	# Public Methods...
 	# -------------------------------------------------------------------------
 	def new_test
-		MMPI2.new @sentences.clone
+		MMPI2.new SentenceFileReader.new(SENTENCES_FILE_NAME).read_all
 	end
-
-	# -------------------------------------------------------------------------
-	# Initialize...
-	# -------------------------------------------------------------------------
-	def initialize
-    @sentences = SentenceFileReader.new(SENTENCES_FILE_NAME).read_all
-  end
 end
