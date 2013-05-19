@@ -1,3 +1,15 @@
+Requisitos de instalación
+-------------------------------------------------------------------------------
+
+En necesario tener previamente instalado:
+1. Interprete ruby.
+	- En Linux: rvm.
+	- En Windows: RubyIntaller.
+2. Instalar dependencies
+	- En Linux: Para esto hay que ejecutar el script install_dependencies.sh
+							$ bash install_dependencies.sh
+	- En Windows: En consola correr el siguiente comando: "gem install ai4r"
+
 Entrenar la red
 -------------------------------------------------------------------------------
 
