@@ -7,7 +7,7 @@ class ObjectYMLDaoTest < Test::Unit::TestCase
 	# -------------------------------------------------------------------------
 	def test_save
 		# Prepare...
-		FileUtils.instance.delete MMPI2_DAO_FILE_NAME
+		FileUtils.delete MMPI2_DAO_FILE_NAME
 		tests = MMPI2Generator.instance.generate 2
 	
 		# Perform...

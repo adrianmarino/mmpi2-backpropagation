@@ -1,13 +1,11 @@
-require 'singleton' 
+require "./helper"
 
-class FileUtils
-	include Singleton
-	
+module FileUtils
 	# -------------------------------------------------------------------------
-	# Methods...
-	# -------------------------------------------------------------------------
-	def delete(a_path)
-		File.delete a_path if File.exist? a_path
+	# Public Methods...
+	# -------------------------------------------------------------------------	
+	def self.delete(a_path)
+		File.delete(a_path) if File.exist?(a_path)
 	end
 
 end 

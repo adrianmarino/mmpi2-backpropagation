@@ -1,8 +1,17 @@
-Generar datos de entrenamiento
+Generar datos de entrenamiento y entrenar la red
 -------------------------------------------------------------------------------
 
-$ ruby generate_training_data.rb 100
+$ ruby train_net.rb 100 300
 
-Este comando genera 100 tests mmpi2 con respuestas aleatorias y guarda los
-resultados en el archivo mmpi2_trainning_tests.yml.
+Este comando genera 100 tests mmpi2 con respuestas aleatorias y entrena la red
+con 300 iteraciones. Finalmente, persiste la red en el archivo 
+mmpi2_net_trained.
+Una vez que tenemos persistida la red, ya no hace falta entrenarla cada vez que 
+necesitamos usarla.
 
+Probar la red
+-------------------------------------------------------------------------------
+
+Para probar la red cun un caso autogenerado:
+
+$ mmpi2_test.rb

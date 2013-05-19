@@ -3,7 +3,7 @@ class MMPI2BackPropagationResult
 	# Public Methods...
 	# -------------------------------------------------------------------------
 	def to_s
-		"Real: #{@real}, Value: #{@value}"
+		"Result => |Array: #{@real}|Value: #{@value}|"
 	end
 
 	# -------------------------------------------------------------------------
@@ -26,5 +26,4 @@ class MMPI2BackPropagationResult
 	def to_number(a_value)
 		BinaryConverter.instance.binary_array_to_number a_value
 	end
-
 end

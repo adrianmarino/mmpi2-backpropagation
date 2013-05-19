@@ -4,24 +4,24 @@ class MMPI2BackPropagation
 	# -------------------------------------------------------------------------
 	# Public Methods...
 	# -------------------------------------------------------------------------
-	def train(tests)
-		tests.each {|a_test| 
- 			result = to_binary_array a_test.depression_level
-			@net.train(a_test.answers_array, result) 
-		}
+	def train(tests,times = 50)
+		times.times{tests.each {|a_test| @net.train a_test.answers_array, to_binary_array(a_test.depression_level) }}
   end
 
 	def results_of(a_test)
-	  result = MMPI2BackPropagationResult.new @net.eval(a_test.answers_array)
-	  puts result
-	  result
+	  MMPI2BackPropagationResult.new @net.eval(a_test.answers_array)
 	end
 
 	def reset
-		@net = Ai4r::NeuralNetwork::Backpropagation.new([32,32,32,32,32,5])
-		#@net.learning_rate = 0.5
-		#@net.momentum = 1
+		@net = Ai4r::NeuralNetwork::Backpropagation.new(@neuron_levels)
+		@net.learning_rate = @learning_rate
+		@net.momentum = @momentum
 	end
+
+	# -------------------------------------------------------------------------
+	# Attributes...
+	# -------------------------------------------------------------------------
+	attr_writer :neuron_levels, :momentum, :learning_rate
 
 	# -------------------------------------------------------------------------
 	# Private Methods...
@@ -38,7 +38,14 @@ class MMPI2BackPropagation
   # -------------------------------------------------------------------------
   # Initialize...
   # -------------------------------------------------------------------------
-  def initialize()
-		reset   	
+  def initialize(neuron_levels = [32,32,5], a_learning_rate = 0.25, a_momentum = 0.1)
+  	@neuron_levels = neuron_levels
+  	@momentum = a_momentum
+  	@learning_rate = a_learning_rate
+		reset
   end
+
+	def self.new_configured
+		MMPI2BackPropagation.new NetConfiguration::NEURON_LEVELS, NetConfiguration::LEARNING_RATE, NetConfiguration::MOMENTUM
+	end
 end

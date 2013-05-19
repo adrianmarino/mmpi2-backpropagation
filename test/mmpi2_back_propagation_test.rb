@@ -7,7 +7,7 @@ class MMPI2BackPropagationTest < Test::Unit::TestCase
 	# -------------------------------------------------------------------------
 	def test_results_of
 		# Perform...
-		@target.train MMPI2Generator.instance.generate(600)
+		@target.train MMPI2Generator.instance.generate(20), 100
 		test = MMPI2Generator.instance.generate.first
 		test.answer_yes_for_all_sentences
 
@@ -15,11 +15,12 @@ class MMPI2BackPropagationTest < Test::Unit::TestCase
 		result = @target.results_of test
 
 		# Assert...
-		# assert_equal 20, result.value
+		assert result.value >= 17
+		assert result.value <= 23
 	end
 
 	def setup
-		@target = MMPI2BackPropagation.new
+		@target = MMPI2BackPropagation.new_configured
 	end
 
 	def teardown
