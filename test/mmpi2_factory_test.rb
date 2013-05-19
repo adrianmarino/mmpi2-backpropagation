@@ -1,5 +1,5 @@
 require "test/unit"
-require "./helper"
+require "./lib/helper"
 
 class MMPI2FactoryTest < Test::Unit::TestCase
 	# -------------------------------------------------------------------------

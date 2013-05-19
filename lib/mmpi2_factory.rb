@@ -1,5 +1,3 @@
-require './helper'
-
 class MMPI2Factory
 	include Singleton
 

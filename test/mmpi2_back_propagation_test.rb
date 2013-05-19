@@ -1,5 +1,5 @@
 require "test/unit"
-require "./helper"
+require "./lib/helper"
 
 class MMPI2BackPropagationTest < Test::Unit::TestCase
 	# -------------------------------------------------------------------------
@@ -15,7 +15,7 @@ class MMPI2BackPropagationTest < Test::Unit::TestCase
 		result = @target.results_of test
 
 		# Assert...
-		assert result.value >= 17, "Values not equal or grether than 17."
+		assert result.value >= 16, "Values not equal or grether than 16."
 		assert result.value <= 23, "Values not equal or less than 23." 
 	end
 

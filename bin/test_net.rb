@@ -1,4 +1,4 @@
-require './helper'
+require '../lib/helper'
 
 net = ObjectDao.new(NET_FILE_NAME).load
 

@@ -1,5 +1,3 @@
-require "./helper"
-
 class BinaryConverter
 	include Singleton
 

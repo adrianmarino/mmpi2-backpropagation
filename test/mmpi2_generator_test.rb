@@ -1,5 +1,5 @@
 require "test/unit"
-require "./helper"
+require "./lib/helper"
 
 class MMPI2GeneratorTest < Test::Unit::TestCase
 	def test_generate

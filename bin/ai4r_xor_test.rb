@@ -1,4 +1,4 @@
-require "./helper"
+require "./lib/helper"
 
 # Create the network with:
 #   2 inputs

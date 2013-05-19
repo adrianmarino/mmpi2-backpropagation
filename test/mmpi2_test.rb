@@ -1,4 +1,4 @@
-require "./helper"
+require "./lib/helper"
 
 class MMPI2Test < Test::Unit::TestCase
 	def test_depression_level_all_answer_yes
