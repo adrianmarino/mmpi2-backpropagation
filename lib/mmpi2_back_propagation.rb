@@ -4,11 +4,21 @@ class MMPI2BackPropagation
 	# -------------------------------------------------------------------------
 	def train(tests, a_max_error = NetConfiguration::MAX_ERROR)
 		count = 1
+		previous_error = 5
 		error = 0
 		begin
 			tests.each {|a_test| error = @net.train(a_test.answers_array,to_binary_array(a_test.depression_level)) }
 			puts "Train #{count} => Error: #{error}..."
 			count+=1
+
+			if count % 20 == 0
+				puts "Check Error => Previous: #{previous_error}, Actual: #{error}"
+				if previous_error+0.2 < error
+					break
+				end
+				previous_error = error
+			end
+
 		end while error >= a_max_error 
   end
 
