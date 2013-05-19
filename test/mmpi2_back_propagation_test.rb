@@ -7,7 +7,7 @@ class MMPI2BackPropagationTest < Test::Unit::TestCase
 	# -------------------------------------------------------------------------
 	def test_results_of
 		# Perform...
-		@target.train MMPI2Generator.instance.generate(20), 100
+		@target.train MMPI2Generator.instance.generate(20)
 		test = MMPI2Generator.instance.generate.first
 		test.answer_yes_for_all_sentences
 
@@ -15,8 +15,8 @@ class MMPI2BackPropagationTest < Test::Unit::TestCase
 		result = @target.results_of test
 
 		# Assert...
-		assert result.value >= 17
-		assert result.value <= 23
+		assert result.value >= 17, "Values not equal or grether than 17."
+		assert result.value <= 22, "Values not equal or less than 22." 
 	end
 
 	def setup
