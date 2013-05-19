@@ -5,10 +5,14 @@ class MMPI2BackPropagation
 	# Public Methods...
 	# -------------------------------------------------------------------------
 	def train(tests, a_max_error = NetConfiguration::MAX_ERROR)
+		count = 1
 		tests.each {|a_test|
+			puts "Train with test #{count}..."
 			begin
-				error = @net.train a_test.answers_array, to_binary_array(a_test.depression_level) 
+				error = @net.train a_test.answers_array, to_binary_array(a_test.depression_level)
 			end while error > a_max_error 
+			puts "Error: #{error}."
+			count+=1
 		}
   end
 
