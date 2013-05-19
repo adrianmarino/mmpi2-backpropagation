@@ -1,4 +1,4 @@
-Generar datos de entrenamiento y entrenar la red
+Entrenar la red
 -------------------------------------------------------------------------------
 
 $ ruby train_net.rb 100 300
@@ -12,6 +12,27 @@ necesitamos usarla.
 Probar la red
 -------------------------------------------------------------------------------
 
-Para probar la red cun un caso autogenerado:
+$ ruby mmpi2_test.rb
 
-$ mmpi2_test.rb
+Este comando prueba la red ya entrenada en el paso anterior generando un caso
+aleatorio para el cual ya se conoce so resultado.
+
+Configurar la red
+-------------------------------------------------------------------------------
+
+La red se puede configurar desde el archivo net_configuration. Veamos su 
+contenido:
+
+module NetConfiguration
+	NEURON_LEVELS = [32,32,5]
+	LEARNING_RATE = 0.25
+	MOMENTUM = 0.1
+end
+
+- Neuron Levels: Aqui se configura cuantas neuronas hay en cada nivel y por ende 
+  el numero de niveles de la red. En el ejemplo se poede ver que tenemos un nivel
+  de entrada de 32 neuronas, uno intermedio de 32 y la salida tiene 5 neuronas.
+- Learning Rate: Es le factor de aprendizaje de la red. Puede variar entre
+  0,05 y 0,25.
+- Momentum: Cuanto más grande es el Momento, la convergencia es más rápida. 
+	Por defecto es 0,1.
