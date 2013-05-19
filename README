@@ -1,6 +1,5 @@
 Requisitos de instalación
 -------------------------------------------------------------------------------
-
 En necesario tener previamente instalado:
 1. Interprete ruby.
 	- En Linux: rvm.
@@ -10,23 +9,24 @@ En necesario tener previamente instalado:
 							$ bash install_dependencies.sh
 	- En Windows: En consola correr el siguiente comando: "gem install ai4r"
 
+
+
+
 Entrenar y guardar la red
 -------------------------------------------------------------------------------
-
 $ ruby train_an_save_net.rb 100 300
 
 Este comando genera 100 tests mmpi2 con respuestas aleatorias y entrena la red
 con 300 iteraciones. Finalmente, guarda la red emtrenada en el archivo 
 net_trained.dat.
-Una vez que tenemos persistida la red, ya no hace falta entrenarla cada vez que 
-necesitamos usarla.
+Una vez que tenemos persistida la red, ya no hace falta entrenarla cada vez
+que necesitamos usarla.
 
 
 
 
 Probar la red
 -------------------------------------------------------------------------------
-
 $ ruby test_net.rb
 
 Este comando prueba la red ya entrenada en el paso anterior, generando un caso
@@ -37,7 +37,6 @@ aleatorio para el cual ya se conoce su resultado.
 
 Entrenar y probar la red en un solo paso
 -------------------------------------------------------------------------------
-
 Es posible entrenar y probar la red en un solo paso, aunque puede demorar
 algun tiempo dependiento del cuantos test se usen para entrenar la red.
 
@@ -50,7 +49,6 @@ Donde 100 es el número de test mmpi2 utilizados para entrenar la red.
 
 Configurar la red
 -------------------------------------------------------------------------------
-
 La red se puede configurar desde el archivo net_configuration. Veamos su 
 contenido:
 
@@ -61,9 +59,10 @@ module NetConfiguration
 	MAX_ERROR = 0.001
 end
 
-- Neuron Levels: Aqui se configura cuantas neuronas hay en cada nivel y por ende 
-  el numero de niveles de la red. En el ejemplo se poede ver que tenemos un nivel
-  de entrada de 32 neuronas, uno intermedio de 32 y la salida tiene 5 neuronas.
+- Neuron Levels: Aqui se configura cuantas neuronas hay en cada nivel y por 
+	ende el numero de niveles de la red. En el ejemplo se poede ver que tenemos
+	un nivel de entrada de 32 neuronas, uno intermedio de 32 y la salida tiene 
+	5 neuronas.
 
 - Learning Rate: Es le factor de aprendizaje de la red. Puede variar entre
   0,05 y 0,25.
@@ -75,5 +74,14 @@ end
 	entrenamiento. El error estra expresado como: 
 	
 				Error = 0.5 * sum( (expected_value-output_value)**2 )
+
+
+
+
+Enlaces en los que esta basada la red
+--------------------------------------------------------------------------------
+- Framework ai4r: http://ai4r.org/neuralNetworks.html
+- Doumentacion de la red: http://ruby-doc.org/gems/docs/o/omikronn-ai4r-0.1/Ai4r/NeuralNetwork/Backpropagation.html#method-i-train
+
 
 
