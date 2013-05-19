@@ -73,9 +73,8 @@ end
 - Momentum: Cuanto más grande es el Momento, la convergencia es más rápida. 
 	Por defecto es 0,1.
 
-- Error: El máximo error de cada iteración en la salida en la etapa de 
-	entrenamiento. El error estra expresado como: 
-	
+- Error: El máximo error de la red en la etapa de entrenamiento. 
+	El error estra expresado como:
 				Error = 0.5 * sum( (expected_value-output_value)**2 )
 
 
