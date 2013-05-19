@@ -2,28 +2,42 @@ class MMPI2BackPropagation
 	# -------------------------------------------------------------------------
 	# Public Methods...
 	# -------------------------------------------------------------------------
-	def train(tests, a_max_error = NetConfiguration::MAX_ERROR)
+	def train(tests, times = 20, a_max_error = NetConfiguration::MAX_ERROR)
 		count = 1
-		tests.each {|a_test|
-			error = 0
-			puts "Test #{count}..."	
-			input = a_test.answers_array
-			output_value  = a_test.depression_level
-			output = @converter.number_to_output(output_value)
-			puts "  - Input: Size: #{input.size}, Array: #{input}"
-			puts "  - Output: Size: #{output.size}, Value: #{output_value}, Array: #{output}"
-			begin
+		times.times{|i|
+			tests.each {|a_test|
+				puts "Test #{count}..."	
+				input = a_test.answers_array
+				output_value  = a_test.depression_level
+				output = @converter.number_to_output(output_value)
+				puts "  - Input: Size: #{input.size}, Array: #{input}"
+				puts "  - Output: Size: #{output.size}, Value: #{output_value}, Array: #{output}"
 				error = @net.train input, output
-			end while error >= a_max_error
-			puts "  - Error: #{error}"
-			count+=1
+				begin
+					error = @net.train input, output
+				end while error >= a_max_error 
+				puts "  - Error: #{error}"
+				count+=1
+			}
 		}
-		puts "Net trained.."
+		puts "Net trained..."
   end
+
+	def train2(tests, a_max_error = NetConfiguration::MAX_ERROR)
+ 		count = 1
+		previous_error = 5
+ 		error = 0
+ 		begin
+ 			tests.each {|a_test| error = @net.train(a_test.answers_array,to_binary_array(a_test.depression_level)) }
+ 			puts "Train #{count} => Error: #{error}..."
+ 			count+=1
+
+ 		end while error >= a_max_error 
+   end
 
 	def results_of(a_test)
 		result = @net.eval a_test.answers_array
-	  new_result result 
+	  new_result result
 	end
 
 	def reset

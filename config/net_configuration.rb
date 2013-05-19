@@ -13,7 +13,7 @@ module NetConfiguration
 	MOMENTUM = 0.1
 
 	# Max net error...
-	MAX_ERROR = 0.001
+	MAX_ERROR = 0.01
 
 	# Output converter used...
 	OUTPUT_CONVERTER = BinaryOutputConverter.new 5
