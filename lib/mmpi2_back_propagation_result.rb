@@ -9,21 +9,13 @@ class MMPI2BackPropagationResult
 	# -------------------------------------------------------------------------
 	# Initialize...
 	# -------------------------------------------------------------------------
-	def initialize(output)
+	def initialize(output, a_value)
 		@real = output
-		@value = to_number(output)
+		@value = a_value
 	end
 
 	# -------------------------------------------------------------------------
 	# Attributes...
 	# -------------------------------------------------------------------------
 	attr_reader :real, :value
-
-	# -------------------------------------------------------------------------
-	# Private Methods...
-	# -------------------------------------------------------------------------
-	private
-	def to_number(a_value)
-		BinaryConverter.instance.binary_array_to_number a_value
-	end
 end

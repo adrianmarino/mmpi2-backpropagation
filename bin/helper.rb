@@ -15,6 +15,10 @@ require "../lib/binary_converter"
 require "../lib/mmpi2_back_propagation_result"
 require "../lib/file_utils"
 
+require "../lib/net_output_converter"
+require "../lib/output_converter"
+require "../lib/output_by_number_converter"
+require "../lib/binary_output_converter"
 
 # ----------------------------------------------------------------------------
 # Constants

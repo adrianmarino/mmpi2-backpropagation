@@ -9,11 +9,17 @@ require "./lib/mmpi2_factory"
 require "./lib/mmpi2_generator"
 require "./lib/object_yml_dao"
 require "./lib/object_dao"
-require "./net_configuration"
 require "./lib/mmpi2_back_propagation"
 require "./lib/binary_converter"
 require "./lib/mmpi2_back_propagation_result"
 require "./lib/file_utils"
+
+require "./lib/net_output_converter"
+require "./lib/output_converter"
+require "./lib/output_by_number_converter"
+require "./lib/binary_output_converter"
+
+
 
 # ----------------------------------------------------------------------------
 # Constants
@@ -25,3 +31,13 @@ READ_ONLY='r'
 WRITE_ONLY='w'
 YES='Si'
 NO='No'
+
+
+module NetConfiguration
+	NEURON_LEVELS = [32,20,5]
+	LEARNING_RATE = 0.25
+	MOMENTUM = 0.1
+	MAX_ERROR = 0.001
+	OUTPUT_CONVERTER = BinaryOutputConverter.new 5
+end
+

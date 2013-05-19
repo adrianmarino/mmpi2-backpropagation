@@ -1,5 +1,5 @@
 require "test/unit"
-require "./lib/helper"
+require "helper"
 
 class ObjectYMLDaoTest < Test::Unit::TestCase
 	# -------------------------------------------------------------------------
