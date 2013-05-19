@@ -16,7 +16,7 @@ class MMPI2BackPropagationTest < Test::Unit::TestCase
 
 		# Assert...
 		assert result.value >= 17, "Values not equal or grether than 17."
-		assert result.value <= 22, "Values not equal or less than 22." 
+		assert result.value <= 23, "Values not equal or less than 23." 
 	end
 
 	def setup

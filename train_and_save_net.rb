@@ -11,4 +11,4 @@ net = MMPI2BackPropagation.new_configured
 puts "Training net..."
 net.train(tests)
 
-ObjectDao.new(MMPI2_NET_FILE_NAME).save net
+ObjectDao.new(NET_FILE_NAME).save net

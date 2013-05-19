@@ -19,8 +19,8 @@ require "./file_utils"
 # Constants
 # ----------------------------------------------------------------------------
 SENTENCES_FILE_NAME = 'sentences'
-MMPI2_DAO_FILE_NAME = 'mmpi2_trainning_tests.yml'
-MMPI2_NET_FILE_NAME = 'mmpi2_net_trained'
+DAO_FILE_NAME = 'trainning_tests.yml'
+NET_FILE_NAME = 'net_trained.dat'
 READ_ONLY='r'
 WRITE_ONLY='w'
 YES='Si'
