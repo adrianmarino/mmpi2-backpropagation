@@ -52,14 +52,17 @@ Donde 100 es el número de test mmpi2 utilizados para entrenar la red.
 
 Configurar la red
 -------------------------------------------------------------------------------
-La red se puede configurar desde el archivo net_configuration. Veamos su 
+La red se puede configurar desde el archivo config/net_configuration. Veamos su 
 contenido:
 
 module NetConfiguration
 	NEURON_LEVELS = [32,32,5]
+	# NEURON_LEVELS = [32,32,20] --> Comentado
 	LEARNING_RATE = 0.25
 	MOMENTUM = 0.1
 	MAX_ERROR = 0.001
+	OUTPUT_CONVERTER = BinaryOutputConverter.new 5
+	# OUTPUT_CONVERTER = BinaryOutputConverter.new 20+1 --> Comentado
 end
 
 - Neuron Levels: Aqui se configura cuantas neuronas hay en cada nivel y por 
@@ -76,6 +79,23 @@ end
 - Error: El máximo error de la red en la etapa de entrenamiento. 
 	El error estra expresado como:
 				Error = 0.5 * sum( (expected_value-output_value)**2 )
+
+- Output converter: Dependiendo la cantidad de salidas hay dos estrategia:
+	
+	1. BinaryOutputConverter: Usada para una salida binaria de 5 neuronas.
+	2. OutputByNumberConverter: Usada para una salida por cada valor posible
+		resultado: Por ejemplo: si tengo 20 valores posible tendre 20 neuronas 
+		de salida.
+
+
+
+
+Correr todos los tests
+-------------------------------------------------------------------------------
+Para correr los tests desde el directorio de la aplicación ejecutar el 
+siguiente comando: 
+
+$ rake test
 
 
 

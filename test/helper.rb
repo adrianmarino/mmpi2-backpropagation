@@ -24,7 +24,7 @@ require "./lib/binary_output_converter"
 # ----------------------------------------------------------------------------
 # Constants
 # ----------------------------------------------------------------------------
-SENTENCES_FILE_NAME = 'sentences'
+SENTENCES_FILE_NAME = './config/sentences'
 DAO_FILE_NAME = 'trainning_tests.yml'
 NET_FILE_NAME = 'net_trained.dat'
 READ_ONLY='r'
