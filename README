@@ -14,6 +14,7 @@ En necesario tener previamente instalado:
 
 Entrenar y guardar la red
 -------------------------------------------------------------------------------
+$ cd bin
 $ ruby train_an_save_net.rb 100 300
 
 Este comando genera 100 tests mmpi2 con respuestas aleatorias y entrena la red
@@ -27,6 +28,7 @@ que necesitamos usarla.
 
 Probar la red
 -------------------------------------------------------------------------------
+$ cd bin
 $ ruby test_net.rb
 
 Este comando prueba la red ya entrenada en el paso anterior, generando un caso
@@ -40,6 +42,7 @@ Entrenar y probar la red en un solo paso
 Es posible entrenar y probar la red en un solo paso, aunque puede demorar
 algun tiempo dependiento del cuantos test se usen para entrenar la red.
 
+$ cd bin
 $ ruby train_and_test_net.rb 100
 
 Donde 100 es el número de test mmpi2 utilizados para entrenar la red.
