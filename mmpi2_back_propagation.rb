@@ -18,9 +18,9 @@ class MMPI2BackPropagation
 	end
 
 	def reset
-		@net = Ai4r::NeuralNetwork::Backpropagation.new([32,32, 5])
-		@net.learning_rate = 3
-		@net.momentum = 1
+		@net = Ai4r::NeuralNetwork::Backpropagation.new([32,32,32,32,32,5])
+		#@net.learning_rate = 0.5
+		#@net.momentum = 1
 	end
 
 	# -------------------------------------------------------------------------

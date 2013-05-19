@@ -7,7 +7,7 @@ class MMPI2BackPropagationTest < Test::Unit::TestCase
 	# -------------------------------------------------------------------------
 	def test_results_of
 		# Perform...
-		@target.train MMPI2Generator.instance.generate(300)
+		@target.train MMPI2Generator.instance.generate(600)
 		test = MMPI2Generator.instance.generate.first
 		test.answer_yes_for_all_sentences
 
