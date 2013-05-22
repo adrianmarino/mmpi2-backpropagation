@@ -6,7 +6,7 @@ class ObjectDao
 		File.open(@path, WRITE_ONLY) do|a_file|
 		 @serializer.save_to objects, a_file
 		end
-		puts "Objects saved on #{@path} file..."
+		@logger.info "Objects saved on #{@path} file..."
 	end
 
 	def load
@@ -16,7 +16,7 @@ class ObjectDao
 	  else
 	  	objects = nil
 	  end
-	  puts "Objects loaded from #{@path} file..."
+	  @logger.info "Objects loaded from #{@path} file..."
 	  objects
 	end
 
@@ -24,6 +24,7 @@ class ObjectDao
 	# Initialize...
 	# -------------------------------------------------------------------------
 	def initialize(a_path, a_serializer = DefaultSerializer.new)
+		@logger = LoggerFactory.instance.logger
 		@path = a_path
 		@serializer = a_serializer
 	end

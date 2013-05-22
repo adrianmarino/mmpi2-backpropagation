@@ -2,6 +2,7 @@ require "rubygems"
 require "yaml"
 require "singleton"
 require "ai4r"
+require "../lib/logger_factory"
 require "../lib/sentence"
 require "../lib/sentence_file_reader"
 require "../lib/mmpi2"
@@ -21,6 +22,7 @@ require "../lib/output_converter"
 require "../lib/output_by_number_converter"
 require "../lib/binary_output_converter"
 
+
 # ----------------------------------------------------------------------------
 # Constants
 # ----------------------------------------------------------------------------
@@ -31,3 +33,4 @@ READ_ONLY='r'
 WRITE_ONLY='w'
 YES='Si'
 NO='No'
+LOGGER_FILE_NAME="../log/mmpi2.log"

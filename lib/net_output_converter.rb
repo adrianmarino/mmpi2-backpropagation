@@ -10,9 +10,6 @@ class NetOutputConverter
 	def output_to_number(an_output)
 		output = round(an_output)
 		index_of output, 1
-		#value = index_of output, 1
-		# puts "OUTPUT: #{output}, VALUE: #{value}"
-		# value
 	end
 
 	def number_to_binary_output(a_value, a_size)

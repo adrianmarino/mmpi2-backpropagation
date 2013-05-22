@@ -26,7 +26,6 @@ class ObjectDaoTest < Test::Unit::TestCase
 	
 		# Assert...
 		assert_not_nil tests
-		puts tests
 	end
 
 	def setup

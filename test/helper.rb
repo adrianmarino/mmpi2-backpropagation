@@ -2,6 +2,7 @@ require "rubygems"
 require "yaml"
 require "singleton"
 require "ai4r"
+require "./lib/logger_factory"
 require "./lib/sentence"
 require "./lib/sentence_file_reader"
 require "./lib/mmpi2"
@@ -32,6 +33,7 @@ READ_ONLY='r'
 WRITE_ONLY='w'
 YES='Si'
 NO='No'
+LOGGER_FILE_NAME="./log/mmpi2.log"
 
 
 module NetConfiguration
