@@ -1,25 +1,26 @@
 #!/usr/bin/env ruby
 require './helper'
 
-puts "--------------"
-puts "| Test MMPI2 |"
-puts "--------------\n\n"
-puts "Responda las siguientes afirmaciones:\n\n"
+# new user interface...
+interface = MMPI2ConsoleInterface.new
+interface.show_head
 
+# new test...
 test = MMPI2Factory.instance.new_test
 
-count = 1
+# answer sentences...
 test.sentences.each { |a_sentence|
-	puts "#{count}. #{a_sentence.text}. Responda: s/n"
-	response = gets.chomp
-	a_sentence.answer_yes if response == 's'
-	a_sentence.answer_no if response == 'n'
-	count+=1
+	answer = interface.answer_of a_sentence
+	a_sentence.answer_yes if answer == 's'
+	a_sentence.answer_no if answer == 'n'
 }
 
+# Load trained net...
 net = ObjectDao.new(NET_FILE_NAME).load
 
-puts "Eval test on net..."
+# Evaluate sentences on net...
+interface.show_evaluating
 result = net.results_of test
 
-puts result
+# Show results...
+interface.show_result result

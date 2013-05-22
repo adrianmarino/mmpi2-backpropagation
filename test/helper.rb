@@ -14,7 +14,8 @@ require "./lib/object_dao"
 require "./lib/mmpi2_back_propagation"
 require "./lib/binary_converter"
 require "./lib/mmpi2_back_propagation_result"
-require "./lib/file_utils"
+require "./lib/back_propagation_logger"
+require "./lib/file_helper"
 
 require "./lib/net_output_converter"
 require "./lib/output_converter"
@@ -23,17 +24,19 @@ require "./lib/binary_output_converter"
 
 
 
+
+
 # ----------------------------------------------------------------------------
 # Constants
 # ----------------------------------------------------------------------------
 SENTENCES_FILE_NAME = './config/sentences'
-DAO_FILE_NAME = 'trainning_tests.yml'
 NET_FILE_NAME = 'net_trained.dat'
 READ_ONLY='r'
 WRITE_ONLY='w'
 YES='Si'
 NO='No'
-LOGGER_FILE_NAME="./log/mmpi2.log"
+LOGGER_PATH="./log"
+LOGGER_FILE_NAME="#{LOGGER_PATH}/mmpi2.log"
 
 
 module NetConfiguration

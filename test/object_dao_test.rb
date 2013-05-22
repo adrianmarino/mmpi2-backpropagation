@@ -7,14 +7,13 @@ class ObjectDaoTest < Test::Unit::TestCase
 	# -------------------------------------------------------------------------
 	def test_save
 		# Prepare...
-		FileUtils.delete DAO_FILE_NAME
 		tests = MMPI2Generator.instance.generate 2
 	
 		# Perform...
 		@target.save tests
 
 		# Assert...
-		assert File.exist?(DAO_FILE_NAME)
+		assert File.exist?(TEST_DAO_FILE_NAME)
 	end
 
 	def test_load
@@ -29,6 +28,13 @@ class ObjectDaoTest < Test::Unit::TestCase
 	end
 
 	def setup
-		@target = ObjectDao.new DAO_FILE_NAME
+		@target = ObjectDao.new TEST_DAO_FILE_NAME
+		FileHelper.delete TEST_DAO_FILE_NAME
 	end
+
+	def teardown
+		FileHelper.delete TEST_DAO_FILE_NAME
+	end
+
+	TEST_DAO_FILE_NAME = "test_dao_file"
 end

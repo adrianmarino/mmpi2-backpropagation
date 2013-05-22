@@ -2,38 +2,24 @@ class MMPI2BackPropagation
 	# -------------------------------------------------------------------------
 	# Public Methods...
 	# -------------------------------------------------------------------------
-	def train(tests, times = 20, a_max_error = NetConfiguration::MAX_ERROR)
+	def train(tests, times = 10, a_max_error = NetConfiguration::MAX_ERROR)
+		logger = BackPropagationLogger.new
 		count = 1
 		times.times{|i|
 			tests.each {|a_test|
-				@logger.info "Test #{count}..."	
-				input = a_test.answers_array
-				output_value  = a_test.depression_level
-				output = @converter.number_to_output(output_value)
-				@logger.info "  - Input: Size: #{input.size}, Array: #{input}"
-				@logger.info "  - Output: Size: #{output.size}, Value: #{output_value}, Array: #{output}"
-				error = @net.train input, output
+				logger.begin_train_test count
+
+				output = @converter.number_to_output(a_test.depression_level)
 				begin
-					error = @net.train input, output
+					error = @net.train a_test.answers_array, output
 				end while error >= a_max_error 
-				@logger.info "  - Error: #{error}"
 				count+=1
+				
+				logger.test_trained a_test, output, error
 			}
 		}
-		@logger.info "Net trained..."
+		logger.end_train_test
   end
-
-	def train2(tests, a_max_error = NetConfiguration::MAX_ERROR)
- 		count = 1
-		previous_error = 5
- 		error = 0
- 		begin
- 			tests.each {|a_test| error = @net.train(a_test.answers_array,to_binary_array(a_test.depression_level)) }
- 			@logger.info "Train #{count} => Error: #{error}..."
- 			count+=1
-
- 		end while error >= a_max_error 
-   end
 
 	def results_of(a_test)
 		result = @net.eval a_test.answers_array
@@ -57,13 +43,12 @@ class MMPI2BackPropagation
 	# -------------------------------------------------------------------------
 	# Attributes...
 	# -------------------------------------------------------------------------
-	attr_writer :neuron_levels, :momentum, :learning_rate
+	attr_writer :neuron_levels, :momentum, :learning_rate, :converter
 
   # -------------------------------------------------------------------------
   # Initialize...
   # -------------------------------------------------------------------------
   def initialize(a_converter, neuron_levels = [32,20,5], a_learning_rate = 0.25, a_momentum = 0.1)
-  	@logger = LoggerFactory.instance.logger
   	@converter = a_converter
   	@neuron_levels = neuron_levels
   	@momentum = a_momentum

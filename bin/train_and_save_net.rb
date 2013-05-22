@@ -10,6 +10,6 @@ tests = MMPI2Generator.instance.generate tests_count
 
 net = MMPI2BackPropagation.new_configured
 puts "Training net..."
-net.train(tests)
+net.train tests
 
 ObjectDao.new(NET_FILE_NAME).save net
