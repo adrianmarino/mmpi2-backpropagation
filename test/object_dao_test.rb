@@ -1,7 +1,7 @@
 require "test/unit"
 require "helper"
 
-class ObjectYMLDaoTest < Test::Unit::TestCase
+class ObjectDaoTest < Test::Unit::TestCase
 	# -------------------------------------------------------------------------
 	# Test Methods...
 	# -------------------------------------------------------------------------
@@ -30,6 +30,6 @@ class ObjectYMLDaoTest < Test::Unit::TestCase
 	end
 
 	def setup
-		@target = ObjectYMLDao.new DAO_FILE_NAME
+		@target = ObjectDao.new DAO_FILE_NAME
 	end
 end
