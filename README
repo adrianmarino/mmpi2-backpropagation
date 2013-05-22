@@ -37,6 +37,18 @@ aleatorio para el cual ya se conoce su resultado.
 
 
 
+Realizar el test MMPI2
+-------------------------------------------------------------------------------
+Para realizar el test hay que ejecutar el siguiente comando:
+
+$ ruby mmpi2_text.rb
+
+Nos va haciendo una serie de preguntas para finalmente darnos nuestro nivel de 
+depresión.
+
+
+
+
 Entrenar y probar la red en un solo paso
 -------------------------------------------------------------------------------
 Es posible entrenar y probar la red en un solo paso, aunque puede demorar
