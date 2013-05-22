@@ -102,6 +102,16 @@ end
 
 
 
+Archivo log
+-------------------------------------------------------------------------------
+existe un solo log el cual se encunetra en el direcorio log. Para leerlo a 
+medida que se va generarndo se peude usar el siguieten comando:
+
+$ tail -f log/mmpi2.log
+
+
+
+
 Correr todos los tests
 -------------------------------------------------------------------------------
 Para correr los tests desde el directorio de la aplicación ejecutar el 
@@ -124,3 +134,6 @@ Repositorio de Código Fuente
 -------------------------------------------------------------------------------
 - URL: https://bitbucket.org/adrianmarino/mmpi2-backpropagation
 - Sistema de control de versiones: Mercurial.
+
+
+
