@@ -4,7 +4,7 @@ class ObjectDao
 	# -------------------------------------------------------------------------
 	def save(objects)
 		File.open(@path, WRITE_ONLY) do|a_file|
-		 Marshal.dump(objects, a_file)
+		 @serializer.save_to objects, a_file
 		end
 		puts "Objects saved on #{@path} file..."
 	end
@@ -12,7 +12,7 @@ class ObjectDao
 	def load
 		objects = []
 		if File.exists?(@path)
-	  	File.open(@path, READ_ONLY){|a_file|objects = Marshal.load(a_file)}
+	  	File.open(@path, READ_ONLY){|a_file|objects = @serializer.load_from a_file}
 	  else
 	  	objects = nil
 	  end
@@ -23,7 +23,8 @@ class ObjectDao
 	# -------------------------------------------------------------------------
 	# Initialize...
 	# -------------------------------------------------------------------------
-	def initialize(a_path)
+	def initialize(a_path, a_serializer = DefaultSerializer.new)
 		@path = a_path
+		@serializer = a_serializer
 	end
 end
