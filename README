@@ -15,10 +15,10 @@ En necesario tener previamente instalado:
 Entrenar y guardar la red
 -------------------------------------------------------------------------------
 $ cd bin
-$ ruby train_an_save_net.rb 100 300
+$ ruby train_an_save_net.rb 100
 
 Este comando genera 100 tests mmpi2 con respuestas aleatorias y entrena la red
-con 300 iteraciones. Finalmente, guarda la red emtrenada en el archivo 
+con 10 iteraciones. Finalmente, guarda la red emtrenada en el archivo 
 net_trained.dat.
 Una vez que tenemos persistida la red, ya no hace falta entrenarla cada vez
 que necesitamos usarla.
