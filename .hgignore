@@ -1,6 +1,6 @@
 syntax:glob
 *.yml
-bin/net_trained.dat
+tmp/net_trained.dat
 log/mmpi2.log
 
 syntax: regexp
