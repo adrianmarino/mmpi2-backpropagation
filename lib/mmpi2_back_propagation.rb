@@ -12,7 +12,7 @@ class MMPI2BackPropagation
 				output = @converter.number_to_output(a_test.depression_level)
 				begin
 					error = @net.train a_test.answers_array, output
-				end while error >= a_max_error 
+				end while error >= a_max_error
 				count+=1
 				
 				logger.test_trained a_test, output, error
