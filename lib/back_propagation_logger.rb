@@ -12,7 +12,7 @@ class BackPropagationLogger
 		output_value  = a_test.depression_level
 		input = a_test.answers_array
 
-		log_value = "  - Input: Size: #{input.size}, Array: #{input}\n  - Input: Size: #{input.size}, Array: #{input}\n  - Output: Size: #{output.size}, Value: #{output_value}, Array: #{output}\n  - Error: #{error}"
+		log_value = "  - Input: Size: #{input.size}, Array: #{input}\n  - Output: Size: #{output.size}, Value: #{output_value}, Array: #{output}\n  - Error: #{error}"
 
 		@logger.info log_value
 		puts log_value
