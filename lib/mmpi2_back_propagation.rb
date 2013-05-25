@@ -2,7 +2,7 @@ class MMPI2BackPropagation
 	# -------------------------------------------------------------------------
 	# Public Methods...
 	# -------------------------------------------------------------------------
-	def train(tests, times = 10, a_max_error = NetConfiguration::MAX_ERROR)
+	def train(tests, times = 3, a_max_error = NetConfiguration::MAX_ERROR)
 		logger = BackPropagationLogger.new
 		count = 1
 		times.times{|i|
