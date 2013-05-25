@@ -1,4 +1,5 @@
-require "./helper"
+#!/usr/bin/env ruby
+require './libs'
 
 # Create "Input: #{j} , he network with:
 #   2 inputs

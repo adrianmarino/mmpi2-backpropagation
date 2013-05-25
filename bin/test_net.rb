@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-require './helper'
+require './libs'
 
 net = ObjectDao.new(NET_FILE_NAME).load
 

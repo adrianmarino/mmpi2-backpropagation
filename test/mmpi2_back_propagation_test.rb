@@ -1,4 +1,3 @@
-require "test/unit"
 require "helper"
 
 class MMPI2BackPropagationTest < Test::Unit::TestCase

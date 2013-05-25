@@ -1,4 +1,3 @@
-require "test/unit"
 require "helper"
 
 class SentenceFileReaderText < Test::Unit::TestCase

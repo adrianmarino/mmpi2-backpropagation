@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
-require './helper'
+require './libs'
 
-# Parameneters...
+# Parameters...
 tests_count = ARGV[0].to_i
 
 puts "Generate #{tests_count} random tests..."
