@@ -1,7 +1,3 @@
-require "../lib/output_converter"
-require "../lib/binary_output_converter"
-require "../lib/output_by_number_converter"
-
 module NetConfiguration
 	# Neurons by level...
 	NEURON_LEVELS = [32,50,50,5]
