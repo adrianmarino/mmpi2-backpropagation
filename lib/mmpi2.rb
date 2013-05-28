@@ -33,27 +33,56 @@ class MMPI2
 		# Column 3...
 		inc_depression_level if @sentences[19].answer_no?
 		inc_depression_level if @sentences[20].answer_yes?
+		inc_depression_level if @sentences[21].answer_no?
+		inc_depression_level if @sentences[22].answer_no?
 
 		# Column 4...
-		inc_depression_level if @sentences[21].answer_yes?
-		inc_depression_level if @sentences[22].answer_yes?
+		inc_depression_level if @sentences[23].answer_yes?
+		inc_depression_level if @sentences[24].answer_no?
+		inc_depression_level if @sentences[25].answer_no?
+		inc_depression_level if @sentences[26].answer_yes?
+		inc_depression_level if @sentences[27].answer_no?
 
 		# Column 5...
-		inc_depression_level if @sentences[23].answer_yes?
-		inc_depression_level if @sentences[24].answer_yes?
-		inc_depression_level if @sentences[25].answer_yes?
-		inc_depression_level if @sentences[26].answer_yes?
+		inc_depression_level if @sentences[28].answer_yes?
+		inc_depression_level if @sentences[29].answer_yes?
+		inc_depression_level if @sentences[30].answer_no?
+		inc_depression_level if @sentences[31].answer_no?
+		inc_depression_level if @sentences[32].answer_no?
+		inc_depression_level if @sentences[33].answer_no?
+		inc_depression_level if @sentences[34].answer_no?
+		inc_depression_level if @sentences[35].answer_yes?
+		inc_depression_level if @sentences[36].answer_yes?
+		inc_depression_level if @sentences[37].answer_no?
 
 		# Column 6...
-		inc_depression_level if @sentences[27].answer_yes
-		inc_depression_level if @sentences[28].answer_yes
+		inc_depression_level if @sentences[38].answer_no?
+		inc_depression_level if @sentences[39].answer_yes?
+		inc_depression_level if @sentences[40].answer_yes?
+		inc_depression_level if @sentences[41].answer_no?
 
 		# Column 7...
-		inc_depression_level if @sentences[29].answer_yes
+		inc_depression_level if @sentences[42].answer_yes?
+		inc_depression_level if @sentences[43].answer_no?
+		inc_depression_level if @sentences[44].answer_no?
 
 		# Column 8...
-		inc_depression_level if @sentences[30].answer_yes
-		inc_depression_level if @sentences[31].answer_yes
+		inc_depression_level if @sentences[45].answer_no?
+		inc_depression_level if @sentences[46].answer_yes?
+		inc_depression_level if @sentences[47].answer_no?
+		inc_depression_level if @sentences[48].answer_no?
+		inc_depression_level if @sentences[49].answer_no?
+		inc_depression_level if @sentences[50].answer_yes?
+		inc_depression_level if @sentences[51].answer_no?
+
+		# Column 9...
+		inc_depression_level if @sentences[52].answer_no?
+		inc_depression_level if @sentences[53].answer_no?
+		inc_depression_level if @sentences[54].answer_no?
+		inc_depression_level if @sentences[55].answer_no?
+
+		# Column 11...
+		inc_depression_level if @sentences[56].answer_no?
 	end
 
 	def answer_yes_for_all_sentences
