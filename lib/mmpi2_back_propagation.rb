@@ -10,6 +10,8 @@ class MMPI2BackPropagation
 				logger.begin_train_test count
 
 				output = @converter.number_to_output(a_test.depression_level)
+
+				puts "output: #{a_test.depression_level}, #{output}"
 				begin
 					error = @net.train a_test.answers_array, output
 				end while error >= a_max_error
@@ -48,7 +50,7 @@ class MMPI2BackPropagation
   # -------------------------------------------------------------------------
   # Initialize...
   # -------------------------------------------------------------------------
-  def initialize(a_converter, neuron_levels = [32,20,5], a_learning_rate = 0.25, a_momentum = 0.1)
+  def initialize(a_converter, neuron_levels = [57,10,6], a_learning_rate = 0.25, a_momentum = 0.1)
   	@converter = a_converter
   	@neuron_levels = neuron_levels
   	@momentum = a_momentum

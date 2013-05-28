@@ -1,6 +1,6 @@
 module NetConfiguration
 	# Neurons by level...
-	NEURON_LEVELS = [32,50,50,5]
+	NEURON_LEVELS = [57,6,6]
 
 	# Learning rate: beetween 0,05 and 0,25...
 	LEARNING_RATE = 0.25
@@ -12,5 +12,5 @@ module NetConfiguration
 	MAX_ERROR = 0.01
 
 	# Output converter used...
-	OUTPUT_CONVERTER = BinaryOutputConverter.new 5
+	OUTPUT_CONVERTER = BinaryOutputConverter.new 6
 end
