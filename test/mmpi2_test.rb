@@ -22,7 +22,7 @@ class MMPI2Test < Test::Unit::TestCase
 		test.calculate_results
 
 		# Assert...
-		assert_equal 17, test.depression_level
+		assert_equal 37, test.depression_level
 	end
 
 	def test_answers_array
@@ -34,7 +34,7 @@ class MMPI2Test < Test::Unit::TestCase
 		answers = test.answers_array
 	
 		# Assert...
-		assert_equal 32, answers.size
+		assert_equal 57, answers.size
 	end
 
 	def test_answer_yes_for_all_sentences
@@ -46,7 +46,7 @@ class MMPI2Test < Test::Unit::TestCase
 
 		# Assert...
 		answers = test.answers_array
-	  assert_equal 32, answers.inject(0) {| a_value, an_answer | a_value + an_answer}
+	  assert_equal 57, answers.inject(0) {| a_value, an_answer | a_value + an_answer}
 	end
 
 	def test_answer_no_for_all_sentences

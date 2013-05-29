@@ -1,4 +1,3 @@
-require "test/unit"
 require "helper"
 
 class ObjectDaoTest < Test::Unit::TestCase

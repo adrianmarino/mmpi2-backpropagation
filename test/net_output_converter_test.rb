@@ -1,4 +1,3 @@
-require "test/unit"
 require "helper"
 
 class NetOutputConverterTest < Test::Unit::TestCase

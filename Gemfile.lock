@@ -1,0 +1,12 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    ai4r (1.12)
+    require_all (1.2.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  ai4r
+  require_all

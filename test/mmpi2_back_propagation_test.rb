@@ -1,4 +1,3 @@
-require "test/unit"
 require "helper"
 
 class MMPI2BackPropagationTest < Test::Unit::TestCase
@@ -15,8 +14,8 @@ class MMPI2BackPropagationTest < Test::Unit::TestCase
 		result = @target.results_of test
 
 		# Assert...
-		assert result.value >= 16, "Values not equal or grether than 16."
-		assert result.value <= 23, "Values not equal or less than 23." 
+		assert result.value >= 16, "Value #{result.value} not equal or grether than 16."
+		assert result.value <= 33, "Value #{result.value} not equal or less than 23." 
 	end
 
 	def setup

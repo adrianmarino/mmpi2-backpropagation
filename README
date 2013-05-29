@@ -4,10 +4,10 @@ En necesario tener previamente instalado:
 1. Interprete ruby.
 	- En Linux: rvm.
 	- En Windows: RubyIntaller.
-2. Instalar dependencies
-	- En Linux: Para esto hay que ejecutar el script install_dependencies.sh
-							$ bash install_dependencies.sh
-	- En Windows: En consola correr el siguiente comando: "gem install ai4r"
+2. Instalar dependencies con el siguente comando:
+		$ bundle install
+	 Nota: si bundle io esta instalado correr el siguiente comando:
+	 	$ gem install bundle
 
 
 
@@ -41,7 +41,8 @@ Realizar el test MMPI2
 -------------------------------------------------------------------------------
 Para realizar el test hay que ejecutar el siguiente comando:
 
-$ ruby mmpi2_text.rb
+$ cd bin
+$ ruby mmpi2_test.rb
 
 Nos va haciendo una serie de preguntas para finalmente darnos nuestro nivel de 
 depresión.
