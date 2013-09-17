@@ -5,9 +5,9 @@ En necesario tener previamente instalado:
 	- En Linux: rvm.
 	- En Windows: RubyIntaller.
 2. Instalar dependencies con el siguente comando:
-		$ bundle install
-	 Nota: si bundle io esta instalado correr el siguiente comando:
-	 	$ gem install bundle
+   $ bundle install
+   Nota: Si bundle no esta instalado correr el siguiente comando:
+   $ gem install bundle
 
 
 
@@ -79,7 +79,7 @@ module NetConfiguration
 end
 
 - Neuron Levels: Aqui se configura cuantas neuronas hay en cada nivel y por 
-	ende el numero de niveles de la red. En el ejemplo se poede ver que tenemos
+	ende el numero de niveles de la red. En el ejemplo se puede ver que tenemos
 	un nivel de entrada de 32 neuronas, uno intermedio de 32 y la salida tiene 
 	5 neuronas.
 
