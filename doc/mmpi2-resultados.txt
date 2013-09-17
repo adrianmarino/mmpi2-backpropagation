@@ -1,0 +1,9 @@
+Resultados:
+•	Hipocondriasis (Hs)
+•	Depresión (D)
+•	Histeria (Hy)
+•	Desviación Psicopática (Pd)
+•	Paranoia (Pa)
+•	Psicastenia (Pt)
+•	Esquizofrenia (Sc)
+•	Hipomanía (Ma)
