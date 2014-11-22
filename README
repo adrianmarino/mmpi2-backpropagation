@@ -2,18 +2,17 @@
 
 En necesario tener previamente instalado:
 
-*  Interprete ruby.
-  * En Linux: rvm.
-  * En Windows: RubyIntaller.
-* Instalar dependencias con el siguiente comando:
+## Instanación de Ruby ##
+* rvm (Linux)
+* RubyIntaller (Windows).
 
+## Instalar dependencias ##
+Con el siguiente comando parado en el directorio principal de la aplicación:
 ```
 #!bash
-
    $ bundle install
 ```
-
-   Nota: Si bundle no esta instalado correr el siguiente comando:
+**Nota:** Si bundle no esta instalado correr el siguiente comando:
    
 ```
 #!bash
@@ -22,13 +21,15 @@ $ gem install bundle
 ```
 
 
+# Entrenar y guardar la red #
 
+```
+#!bash
 
-
-Entrenar y guardar la red
--------------------------------------------------------------------------------
 $ cd bin
 $ ruby train_an_save_net.rb 100
+```
+
 
 Este comando genera 100 tests mmpi2 con respuestas aleatorias y entrena la red
 con 10 iteraciones. Finalmente, guarda la red entrenada en el archivo 
@@ -39,10 +40,16 @@ que necesitamos usarla.
 
 
 
-Probar la red
--------------------------------------------------------------------------------
+# Probar la red #
+
+
+```
+#!bash
+
 $ cd bin
 $ ruby test_net.rb
+```
+
 
 Este comando prueba la red ya entrenada en el paso anterior, generando un caso
 aleatorio para el cual ya se conoce su resultado.
@@ -50,12 +57,18 @@ aleatorio para el cual ya se conoce su resultado.
 
 
 
-Realizar el test MMPI2
--------------------------------------------------------------------------------
+# Realizar el test MMPI2 #
+
 Para realizar el test hay que ejecutar el siguiente comando:
+
+
+```
+#!bash
 
 $ cd bin
 $ ruby mmpi2_test.rb
+```
+
 
 Nos va haciendo una serie de preguntas para finalmente darnos nuestro nivel de 
 depresión.
@@ -63,21 +76,27 @@ depresión.
 
 
 
-Entrenar y probar la red en un solo paso
--------------------------------------------------------------------------------
+# Entrenar y probar la red en un solo paso #
+
 Es posible entrenar y probar la red en un solo paso, aunque puede demorar
 algún tiempo dependiendo del cuantos test se usen para entrenar la red.
 
+
+```
+#!bash
+
 $ cd bin
 $ ruby train_and_test_net.rb 100
+
+```
 
 Donde 100 es el número de test mmpi2 utilizados para entrenar la red.
 
 
 
 
-Configurar la red
--------------------------------------------------------------------------------
+# Configurar la red #
+
 La red se puede configurar desde el archivo config/net_configuration. Veamos su 
 contenido:
 
@@ -112,35 +131,47 @@ end
            Por ejemplo: si tengo 20 valores posible, tendre 20 neuronas de salida.
 
 
-Archivo log
--------------------------------------------------------------------------------
+# Archivo log #
+
 existe un solo log el cual se encunetra en el directorio log. Para leerlo a 
 medida que se va generarndo se puede usar el siguieten comando:
 
+
+```
+#!bash
+
 $ tail -f log/mmpi2.log
+```
 
 
 
 
-Correr todos los tests
--------------------------------------------------------------------------------
+
+# Correr todos los tests #
+
 Para correr los tests desde el directorio de la aplicación ejecutar el 
 siguiente comando: 
 
+
+```
+#!bash
+
 $ rake test
 
-
-
-
-Enlaces en los que esta basada la red
---------------------------------------------------------------------------------
-- Framework ai4r: http://ai4r.org/neuralNetworks.html
-- Doumentacion de la red: http://ruby-doc.org/gems/docs/o/omikronn-ai4r-0.1/Ai4r/NeuralNetwork/Backpropagation.html#method-i-train
+```
 
 
 
 
-Repositorio de Código Fuente
--------------------------------------------------------------------------------
-- URL: https://bitbucket.org/adrianmarino/mmpi2-backpropagation
-- Sistema de control de versiones: Mercurial.
+# Enlaces en los que esta basada la red #
+
+* Framework ai4r: http://ai4r.org/neuralNetworks.html
+* Doumentacion de la red: http://ruby-doc.org/gems/docs/o/omikronn-ai4r-0.1/Ai4r/NeuralNetwork/Backpropagation.html#method-i-train
+
+
+
+
+# Repositorio de Código Fuente #
+
+* URL: https://bitbucket.org/adrianmarino/mmpi2-backpropagation
+* Sistema de control de versiones: Mercurial.
