@@ -166,12 +166,10 @@ $ rake test
 # Enlaces en los que esta basada la red #
 
 * [AI4R](http://ai4r.org/neuralNetworks.html)
-* Doumentacion de la red: http://ruby-doc.org/gems/docs/o/omikronn-ai4r-0.1/Ai4r/NeuralNetwork/Backpropagation.html#method-i-train
-
-
+* [Doumentacion de la red](http://ruby-doc.org/gems/docs/o/omikronn-ai4r-0.1/Ai4r/NeuralNetwork/Backpropagation.html#method-i-train)
 
 
 # Repositorio de Código Fuente #
 
-* URL: https://bitbucket.org/adrianmarino/mmpi2-backpropagation
-* Sistema de control de versiones: Mercurial.
+* [Repo](https://bitbucket.org/adrianmarino/mmpi2-backpropagation)
+* Sistema de control de versiones: [Mercurial](http://mercurial.selenic.com/)
