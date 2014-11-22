@@ -4,7 +4,7 @@ En necesario tener previamente instalado:
 1. Interprete ruby.
 	- En Linux: rvm.
 	- En Windows: RubyIntaller.
-2. Instalar dependencies con el siguente comando:
+2. Instalar dependencias con el siguiente comando:
    $ bundle install
    Nota: Si bundle no esta instalado correr el siguiente comando:
    $ gem install bundle
@@ -53,7 +53,7 @@ depresión.
 Entrenar y probar la red en un solo paso
 -------------------------------------------------------------------------------
 Es posible entrenar y probar la red en un solo paso, aunque puede demorar
-algun tiempo dependiento del cuantos test se usen para entrenar la red.
+algún tiempo dependiendo del cuantos test se usen para entrenar la red.
 
 $ cd bin
 $ ruby train_and_test_net.rb 100
@@ -68,6 +68,8 @@ Configurar la red
 La red se puede configurar desde el archivo config/net_configuration. Veamos su 
 contenido:
 
+```
+#!ruby
 module NetConfiguration
 	NEURON_LEVELS = [32,32,5]
 	# NEURON_LEVELS = [32,32,20] --> Comentado
@@ -77,29 +79,24 @@ module NetConfiguration
 	OUTPUT_CONVERTER = BinaryOutputConverter.new 5
 	# OUTPUT_CONVERTER = BinaryOutputConverter.new 20+1 --> Comentado
 end
+```
 
-- Neuron Levels: Aqui se configura cuantas neuronas hay en cada nivel y por 
+* Neuron Levels: Aqui se configura cuantas neuronas hay en cada nivel y por 
 	ende el numero de niveles de la red. En el ejemplo se puede ver que tenemos
 	un nivel de entrada de 32 neuronas, uno intermedio de 32 y la salida tiene 
 	5 neuronas.
-
-- Learning Rate: Es le factor de aprendizaje de la red. Puede variar entre
+* Learning Rate: Es le factor de aprendizaje de la red. Puede variar entre
   0,05 y 0,25.
-
-- Momentum: Cuanto más grande es el Momento, la convergencia es más rápida. 
+* Momentum: Cuanto más grande es el Momento, la convergencia es más rápida. 
 	Por defecto es 0,1.
-
-- Error: El máximo error de la red en la etapa de entrenamiento. 
+* Error: El máximo error de la red en la etapa de entrenamiento. 
 	El error estra expresado como:
 	Error = 0.5 * sum( (expected_value-output_value)**2 )
-
-- Output converter: Dependiendo la cantidad de salidas hay dos estrategia:
+* Output converter: Dependiendo la cantidad de salidas hay dos estrategia:
 	
 	1. BinaryOutputConverter: Usada para una salida binaria de 5 neuronas.
 	2. OutputByNumberConverter: Usada para una salida por cada valor posible.
            Por ejemplo: si tengo 20 valores posible, tendre 20 neuronas de salida.
-
-
 
 
 Archivo log
@@ -134,6 +131,3 @@ Repositorio de Código Fuente
 -------------------------------------------------------------------------------
 - URL: https://bitbucket.org/adrianmarino/mmpi2-backpropagation
 - Sistema de control de versiones: Mercurial.
-
-
-
