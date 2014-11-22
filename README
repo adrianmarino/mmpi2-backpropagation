@@ -165,7 +165,7 @@ $ rake test
 
 # Enlaces en los que esta basada la red #
 
-* Framework ai4r: http://ai4r.org/neuralNetworks.html
+* [AI4R](http://ai4r.org/neuralNetworks.html)
 * Doumentacion de la red: http://ruby-doc.org/gems/docs/o/omikronn-ai4r-0.1/Ai4r/NeuralNetwork/Backpropagation.html#method-i-train
 
 
