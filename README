@@ -6,7 +6,7 @@ En necesario tener previamente instalado:
 * rvm (Linux)
 * RubyIntaller (Windows).
 
-## Instalar dependencias ##
+## Descargar dependencias ##
 Con el siguiente comando parado en el directorio principal de la aplicación:
 ```
 #!bash
