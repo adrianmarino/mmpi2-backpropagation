@@ -3,8 +3,8 @@
 En necesario tener previamente instalado:
 
 *  Interprete ruby.
-** En Linux: rvm.
-** En Windows: RubyIntaller.
+  * En Linux: rvm.
+  * En Windows: RubyIntaller.
 * Instalar dependencias con el siguiente comando:
 
 ```
