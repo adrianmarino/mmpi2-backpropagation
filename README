@@ -1,6 +1,7 @@
-Requisitos de instalación
--------------------------------------------------------------------------------
+# Requisitos de instalación #
+
 En necesario tener previamente instalado:
+
 *  Interprete ruby.
 ** En Linux: rvm.
 ** En Windows: RubyIntaller.
