@@ -1,10 +1,10 @@
 Requisitos de instalación
 -------------------------------------------------------------------------------
 En necesario tener previamente instalado:
-1. Interprete ruby.
-	* En Linux: rvm.
-	* En Windows: RubyIntaller.
-2. Instalar dependencias con el siguiente comando:
+1.  Interprete ruby.
+* En Linux: rvm.
+* En Windows: RubyIntaller.
+1. Instalar dependencias con el siguiente comando:
 
 ```
 #!bash
