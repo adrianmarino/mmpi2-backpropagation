@@ -5,9 +5,21 @@ En necesario tener previamente instalado:
 	- En Linux: rvm.
 	- En Windows: RubyIntaller.
 2. Instalar dependencias con el siguiente comando:
+
+```
+#!bash
+
    $ bundle install
+```
+
    Nota: Si bundle no esta instalado correr el siguiente comando:
-   $ gem install bundle
+   
+```
+#!bash
+
+$ gem install bundle
+```
+
 
 
 
