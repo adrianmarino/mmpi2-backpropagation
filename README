@@ -1,3 +1,7 @@
+#mmpi2-backpropagation#
+
+Por medio de un cuestionario permite determinar en nivel del indicador de depresión del examen MMPI-2 utilizando una red neuronal back propagation. 
+
 # Requerimientos #
 Para instalar la aplicación es necesario realizar los siguientes pasos:
 ## Instalación de Ruby ##
