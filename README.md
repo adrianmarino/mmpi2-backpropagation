@@ -29,7 +29,7 @@ gem install bundle
 
 ```
 cd bin
-ruby train_an_save_net.rb 100
+ruby train_and_save_net.rb 100
 ```
 
 Este comando genera 100 tests MMPI-2 con respuestas aleatorias y entrena la red con 10 iteraciones. Finalmente, guarda la red entrenada en el archivo  net_trained.dat. Una vez que tenemos persistida la red, ya no hace falta entrenarla cada vez que necesitamos usarla.
