@@ -108,3 +108,7 @@ siguiente comando:
 ```
 rake test
 ```
+
+## License
+
+mmpi2-backpropagation is released under the [MIT License](http://www.opensource.org/licenses/MIT).
