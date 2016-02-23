@@ -94,7 +94,7 @@ El error estra expresado como: Error = 0.5 * sum( (expected_value-output_value)*
 
 # Archivo log #
 
-existe un solo log el cual se encunetra en el directorio log. Para leerlo a medida que se va generarndo se puede usar el siguieten comando:
+existe un solo log el cual se encuentra en el directorio log. Para leerlo a medida que se va generarndo se puede usar el siguieten comando:
 
 ```
 tail -f log/mmpi2.log
