@@ -1,4 +1,4 @@
-#Test MMPI2#
+# Test MMPI2 #
 
 El test MMPI-2 es un cuestionario que permite determinar varias estados psicologicos de un paciente. Esta aplicación determina el nivel de depresión del paciente utilizando una red neuronal back-propagation. 
 
